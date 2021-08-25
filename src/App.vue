@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <img alt="Vue logo" height="100" src="./assets/cg-header.png">
+    <characterInfo />
     <Header :sectionTitle="sessionName" msg="Welcome to Your Vue.js App"/>
     <calendar></calendar>
   </div>
@@ -10,22 +11,19 @@
 // Components
 import Header from './components/Header.vue'
 import Calendar from "@/components/calendar";
+import characterInfo from "@/components/characterInfo";
 
 // Data
 import sessionData from "./mock-data/sessionData";
-
-// Helpers
-import getPlayerData from "@/helpers/getPlayerData.ts";
 
 export default {
   name: 'App',
   components: {
     Calendar,
-    Header
+    Header,
+    characterInfo
   },
   data() {
-    console.log(getPlayerData());
-
     return {
       sessionName: sessionData.sessionName
     }
