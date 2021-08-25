@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+    <h1>{{ sectionTitle }}</h1>
     <p>
       For a Nice and recipes on how to configure / customize this project,<br>
       check out the
@@ -12,9 +12,10 @@
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'Header',
   props: {
-    msg: String
+    msg: String,
+    sectionTitle: String
   }
 }
 </script>

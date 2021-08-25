@@ -1,20 +1,34 @@
 <template>
   <div id="app">
     <img alt="Vue logo" height="100" src="./assets/cg-header.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Header :sectionTitle="sessionName" msg="Welcome to Your Vue.js App"/>
     <calendar></calendar>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// Components
+import Header from './components/Header.vue'
 import Calendar from "@/components/calendar";
+
+// Data
+import sessionData from "./mock-data/sessionData";
+
+// Helpers
+import getPlayerData from "@/helpers/getPlayerData.ts";
 
 export default {
   name: 'App',
   components: {
     Calendar,
-    HelloWorld
+    Header
+  },
+  data() {
+    console.log(getPlayerData());
+
+    return {
+      sessionName: sessionData.sessionName
+    }
   }
 }
 </script>
