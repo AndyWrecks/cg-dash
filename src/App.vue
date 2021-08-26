@@ -7,14 +7,15 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 // Components
-import Header from './components/Header.vue'
-import Calendar from "@/components/calendar";
-import characterInfo from "@/components/characterInfo";
+import Header from '@/components/Header.vue'
+import Calendar from "@/components/calendar.vue";
+import characterInfo from "@/components/characterInfo.vue";
 
 // Data
 import sessionData from "./mock-data/sessionData";
+import {appCompData} from "@/types/types";
 
 export default {
   name: 'App',
@@ -23,7 +24,7 @@ export default {
     Header,
     characterInfo
   },
-  data() {
+  data() : appCompData {
     return {
       sessionName: sessionData.sessionName
     }
