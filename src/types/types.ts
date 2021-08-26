@@ -8,6 +8,7 @@ export type groomedPlayerDataT = {
       [key: string]: playerCharacterAbilityT;
     };
   };
+  class: any[];
 };
 
 export type playerCharacterAbilityT = {
