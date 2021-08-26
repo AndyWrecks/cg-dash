@@ -1,13 +1,17 @@
 <template>
-  <div>
-    <div v-for="character in characters" :key="character.name">
-      <img :src="character.img" width="50" :alt="character.name+'-portrait'">
-      {{character.name}}
-      <span v-for="(value, name) in character.data.abilities" :key="name">
+  <v-container>
+    <v-row v-for="character in characters" :key="character.name">
+      <v-col>
+        <img :src="character.img" width="50" :alt="character.name+'-portrait'">
+      </v-col>
+      <v-col>
+        {{character.name}}
+        <span v-for="(value, name) in character.data.abilities" :key="name">
         {{name}}: {{value.value}}
       </span>
-    </div>
-  </div>
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 
 <script lang="ts">
