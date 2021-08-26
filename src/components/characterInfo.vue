@@ -11,7 +11,7 @@
 </template>
 
 <script lang="ts">
-import getPlayerData from "@/helpers/getPlayerData.ts";
+import getPlayerData from "@/helpers/getPlayerData";
 import {characterInfoCompData} from "@/types/types";
 
 const playerData = getPlayerData();
