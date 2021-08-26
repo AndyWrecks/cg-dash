@@ -1,6 +1,7 @@
 <template>
   <div>
     <div v-for="character in characters" :key="character.name">
+      <img :src="character.img" width="50" :alt="character.name+'-portrait'">
       {{character.name}}
       <span v-for="(value, name) in character.data.abilities" :key="name">
         {{name}}: {{value.value}}

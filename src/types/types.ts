@@ -2,6 +2,7 @@ export type groomedPlayerDataSet = groomedPlayerDataT[];
 
 export type groomedPlayerDataT = {
   name: string;
+  img: string;
   data: {
     abilities: {
       [key: string]: playerCharacterAbilityT;
