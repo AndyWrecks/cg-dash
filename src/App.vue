@@ -1,7 +1,11 @@
 <template>
   <v-container id="app">
-    <img alt="Vue logo" height="100" src="./assets/cg-header.png">
-    <Header :sectionTitle="sessionName" msg="Welcome to Your Vue.js App"/>
+    <v-row>
+      <v-col>
+        <img alt="Vue logo" height="100" src="./assets/cg-header.png">
+        <Header :sectionTitle="sessionName" msg="Welcome to Your Vue.js App"/>
+      </v-col>
+    </v-row>
     <v-row>
       <v-col>
         <characterInfo />
@@ -16,7 +20,10 @@
     </v-row>
 
     <v-row>
-      <calendar></calendar>
+      <v-col>
+
+        <calendar></calendar>
+      </v-col>
     </v-row>
   </v-container>
 </template>
