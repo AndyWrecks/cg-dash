@@ -1,7 +1,7 @@
 <template>
-  <v-container max-width="450">
+  <v-card>
     <v-expansion-panels>
-        <v-expansion-panel v-for="character in characters" :key="character.name" inset>
+        <v-expansion-panel v-for="character in characters" :key="character.name">
             <v-expansion-panel-header>
               <v-row>
                 <v-col>
@@ -26,7 +26,7 @@
             </v-expansion-panel-content>
         </v-expansion-panel>
     </v-expansion-panels>
-  </v-container>
+  </v-card>
 </template>
 
 <script lang="ts">

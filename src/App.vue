@@ -1,11 +1,24 @@
 <template>
-  <div id="app">
+  <v-container id="app">
     <img alt="Vue logo" height="100" src="./assets/cg-header.png">
-    <characterInfo />
-    <quest-log />
     <Header :sectionTitle="sessionName" msg="Welcome to Your Vue.js App"/>
-    <calendar></calendar>
-  </div>
+    <v-row>
+      <v-col>
+        <characterInfo />
+      </v-col>
+      <v-col>
+        <quest-log />
+      </v-col>
+    </v-row>
+
+    <v-row>
+      <v-divider />
+    </v-row>
+
+    <v-row>
+      <calendar></calendar>
+    </v-row>
+  </v-container>
 </template>
 
 <script lang="ts">
