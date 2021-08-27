@@ -8,7 +8,7 @@
     </v-row>
     <v-row>
       <v-col>
-        <characterInfo />
+        <CharacterInfo />
       </v-col>
       <v-col>
         <quest-log />
@@ -22,7 +22,7 @@
     <v-row>
       <v-col>
 
-        <calendar></calendar>
+        <Calendar></Calendar>
       </v-col>
     </v-row>
   </v-container>
@@ -31,8 +31,8 @@
 <script lang="ts">
 // Components
 import Header from '@/components/Header.vue'
-import Calendar from "@/components/calendar.vue";
-import characterInfo from "@/components/characterInfo.vue";
+import Calendar from "@/components/Calendar.vue";
+import CharacterInfo from "@/components/CharacterInfo.vue";
 import QuestLog from "@/components/QuestLog.vue";
 
 // Data
@@ -44,7 +44,7 @@ export default {
   components: {
     Calendar,
     Header,
-    characterInfo,
+    CharacterInfo,
     QuestLog
   },
   data() : appCompData {
