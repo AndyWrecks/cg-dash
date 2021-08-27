@@ -1,3 +1,4 @@
+// PC Data Types
 export type groomedPlayerDataSet = groomedPlayerDataT[];
 
 export type groomedPlayerDataT = {
@@ -16,7 +17,14 @@ export type playerCharacterAbilityT = {
   proficient: 0 | 1;
 };
 
-// Component Data
+// Quest Data Types
+export type groomedQuestDataSet = groomedQuestDataT[];
+
+export type groomedQuestDataT = {
+  name: string;
+};
+
+// Component Data Types
 
 export type appCompData = {
   sessionName: string;
@@ -24,4 +32,8 @@ export type appCompData = {
 
 export type characterInfoCompData = {
   characters: groomedPlayerDataSet;
+};
+
+export type questLogCompData = {
+  quests: groomedQuestDataSet;
 };

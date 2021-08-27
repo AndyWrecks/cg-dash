@@ -1,0 +1,62 @@
+{
+  "name": "Sunblight",
+  "content": "",
+  "sort": 0,
+  "flags": {
+    "forien-quest-log": {
+      "json": {
+        "name": "Sunblight",
+        "status": "active",
+        "giver": "JournalEntry.ZTA1ZTUzOTU2Y2Yy",
+        "giverData": {
+          "uuid": "JournalEntry.ZTA1ZTUzOTU2Y2Yy",
+          "name": "Player Art Handout: Sunblight",
+          "img": "worlds/sunday-icewind-dale-rime-of-the-frostmaiden/journal/020_-_Player_Handouts/003_-_Player_Art_Handouts/077_-_Player_Art_Handout_3A_Sunblight/avatar.png",
+          "hasTokenImg": false
+        },
+        "description": "<p>@JournalEntry[OGU5M2NiYWY4YTE4]{Handout: Xardorok Sunblight}</p>\n<p>@JournalEntry[MzU4NDAxYzJmZTI4]{Handout: Grandolpha Muzgardt}</p>\n<p>@JournalEntry[OThjMDgwMzg5OWFl]{Handout: Durth Sunblight} - dead</p>\n<p>@JournalEntry[NGE5ZTZiYTc0MTk5]{Handout: Nildar Sunblight} - dead</p>\n<p>&nbsp;</p>\n<p>Grandolpha Muzgardt the grand dame of the Muzgardt duergar clan, has recently arrived at the fortress after being invited here by Xardorok. The Muzgardts are based in Gracklstugh, a duergar city in the Underdark. They mass-produce and distribute a filthy duergar ale made from mushrooms. Xardorok has been eager to take a fourth wife and has had his eye on Grandolpha Muzgardt for many years. He asked Grandolpha to his fortress to give her a gift-a pseudodragon made of chardalyn (a pseudo-pseudodragon, if you will)-and make her an offer she can't refuse. Once he conquers Icewind Dale, he wants the Muzgardts to control the ale trade throughout his sunless surface kingdom.</p>\n<p>Grandolpha, for her part, is too canny and jaded to fall for Xardorok's blunt attempt at seduction. She has begun plotting with disenfranchised advisors and warriors in his ranks to overthrow him when the moment is right. Ironically, despite his paranoia, Xardorok is too blinded by his admiration for Grandolpha to foresee her treachery.</p>",
+        "gmnotes": "",
+        "image": "actor",
+        "giverName": "actor",
+        "splash": "",
+        "splashPos": "center",
+        "splashAsIcon": false,
+        "location": null,
+        "priority": 0,
+        "type": null,
+        "parent": null,
+        "subquests": [],
+        "tasks": [
+          {
+            "name": "Confront Xardorok Sunblight",
+            "completed": false,
+            "failed": false,
+            "hidden": false,
+            "state": "square",
+            "uuidv4": "3f1081cf-338d-46b2-a858-7700ecaac814"
+          },
+          {
+            "name": "Infiltrate the fortress",
+            "completed": true,
+            "failed": false,
+            "hidden": false,
+            "state": "check-square",
+            "uuidv4": "59778d0b-7a87-4bf0-a5e6-28ea0a03cc3e"
+          }
+        ],
+        "rewards": [],
+        "date": {
+          "create": 1630070635111,
+          "start": 1630071240949,
+          "end": null
+        }
+      }
+    },
+    "exportSource": {
+      "world": "sunday-icewind-dale-rime-of-the-frostmaiden",
+      "system": "dnd5e",
+      "coreVersion": "0.8.9",
+      "systemVersion": "1.4.2"
+    }
+  }
+}

@@ -2,6 +2,7 @@
   <div id="app">
     <img alt="Vue logo" height="100" src="./assets/cg-header.png">
     <characterInfo />
+    <quest-log />
     <Header :sectionTitle="sessionName" msg="Welcome to Your Vue.js App"/>
     <calendar></calendar>
   </div>
@@ -12,6 +13,7 @@
 import Header from '@/components/Header.vue'
 import Calendar from "@/components/calendar.vue";
 import characterInfo from "@/components/characterInfo.vue";
+import QuestLog from "@/components/QuestLog.vue";
 
 // Data
 import sessionData from "./mock-data/sessionData";
@@ -22,7 +24,8 @@ export default {
   components: {
     Calendar,
     Header,
-    characterInfo
+    characterInfo,
+    QuestLog
   },
   data() : appCompData {
     return {

@@ -30,7 +30,7 @@
 </template>
 
 <script lang="ts">
-import getPlayerData from "@/helpers/getPlayerData";
+import getPlayerData from "@/helpers/playerData/getPlayerData";
 import {characterInfoCompData} from "@/types/types";
 
 const playerData = getPlayerData();

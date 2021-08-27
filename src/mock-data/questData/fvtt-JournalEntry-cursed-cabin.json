@@ -1,0 +1,49 @@
+{
+  "name": "Cursed Cabin",
+  "content": "",
+  "sort": 0,
+  "flags": {
+    "forien-quest-log": {
+      "json": {
+        "name": "Cursed Cabin",
+        "status": "available",
+        "giver": null,
+        "giverData": null,
+        "description": "",
+        "gmnotes": "",
+        "image": "actor",
+        "giverName": "actor",
+        "splash": "",
+        "splashPos": "center",
+        "splashAsIcon": false,
+        "location": null,
+        "priority": 0,
+        "type": null,
+        "parent": null,
+        "subquests": [],
+        "tasks": [
+          {
+            "name": "Investigate the Cursed Cabin",
+            "completed": false,
+            "failed": false,
+            "hidden": false,
+            "state": "square",
+            "uuidv4": "ad03ce22-1a02-42e1-8ac7-ac3450f89f47"
+          }
+        ],
+        "rewards": [],
+        "date": {
+          "create": 1630071392205,
+          "start": null,
+          "end": null
+        }
+      }
+    },
+    "exportSource": {
+      "world": "sunday-icewind-dale-rime-of-the-frostmaiden",
+      "system": "dnd5e",
+      "coreVersion": "0.8.9",
+      "systemVersion": "1.4.2"
+    }
+  }
+}

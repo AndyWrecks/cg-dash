@@ -1,0 +1,54 @@
+{
+  "name": "End Auril's Endless Winter",
+  "content": "",
+  "sort": 0,
+  "flags": {
+    "forien-quest-log": {
+      "json": {
+        "name": "End Auril's Endless Winter",
+        "status": "available",
+        "giver": "JournalEntry.MTIxODQ3MDQ0M2Jl",
+        "giverData": {
+          "uuid": "JournalEntry.MTIxODQ3MDQ0M2Jl",
+          "name": "Handout: Auril (First Form)",
+          "img": "worlds/sunday-icewind-dale-rime-of-the-frostmaiden/journal/020_-_Player_Handouts/004_-_Named_Creatures__26_Monster_Handouts/003_-_Handout_3A_Auril__28First_Form_29/avatar.png",
+          "hasTokenImg": false
+        },
+        "description": "<p>@JournalEntry[MTIxODQ3MDQ0M2Jl]{Handout: Auril (First Form)}</p>\n<p>@JournalEntry[MGI5OGE3YmFmZTk1]{Handout: Auril (Second Form)}</p>\n<p>@JournalEntry[NDEyZjhkYWU5ZTc2]{Handout: Auril (Third Form)}</p>",
+        "gmnotes": "",
+        "image": "actor",
+        "giverName": "actor",
+        "splash": "",
+        "splashPos": "center",
+        "splashAsIcon": false,
+        "location": null,
+        "priority": 0,
+        "type": null,
+        "parent": null,
+        "subquests": [],
+        "tasks": [
+          {
+            "name": "Find Auril's Abode",
+            "completed": false,
+            "failed": false,
+            "hidden": false,
+            "state": "square",
+            "uuidv4": "5a8bb428-ba85-4949-a3cb-8ca1759bf2b0"
+          }
+        ],
+        "rewards": [],
+        "date": {
+          "create": 1630071504379,
+          "start": null,
+          "end": null
+        }
+      }
+    },
+    "exportSource": {
+      "world": "sunday-icewind-dale-rime-of-the-frostmaiden",
+      "system": "dnd5e",
+      "coreVersion": "0.8.9",
+      "systemVersion": "1.4.2"
+    }
+  }
+}
