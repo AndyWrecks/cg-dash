@@ -31,17 +31,19 @@
 
 <script lang="ts">
 import getPlayerData from "@/helpers/playerData/getPlayerData";
-import {characterInfoCompData} from "@/types/types";
-
-const playerData = getPlayerData();
 
 export default {
   name: "characterInfo",
-  data() : characterInfoCompData {
+  data() {
     return {
-      characters: playerData
+      characters: null
     }
-  }
+  },
+  created() {
+    getPlayerData().then(data => {
+      this.characters = data
+    })
+  },
 }
 </script>
 
