@@ -7,10 +7,10 @@ import { groomedPlayerDataSet } from "@/types/types";
 
 export default async (): groomedPlayerDataSet => {
   return await fetch(
-    "https://commonwealthgiant.s3.us-east-2.amazonaws.com/character-json/test-user.json"
+    "https://commonwealthgiant.s3.us-east-2.amazonaws.com/character-json/hello-world-actors.json"
   )
     .then(response => response.json())
     .then(data => {
-      return groomPlayerData([playerData1, playerData2, data]);
+      return groomPlayerData(data);
     });
 };

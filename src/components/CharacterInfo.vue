@@ -36,14 +36,28 @@ export default {
   name: "characterInfo",
   data() {
     return {
-      characters: null
+      characters: null,
+      timer: ''
     }
   },
   created() {
-    getPlayerData().then(data => {
-      this.characters = data
-    })
+    this.getPlayerData();
+    this.timer = setInterval(function () {this.getPlayerData()}.bind(this), 10000);
   },
+  methods: {
+    getPlayerData() {
+      getPlayerData().then(data => {
+        console.log('updated');
+        this.characters = data
+      });
+    },
+    cancelAutoUpdate () {
+      clearInterval(this.timer);
+    }
+  },
+  beforeDestroy() {
+    this.cancelAutoUpdate()
+  }
 }
 </script>
 
