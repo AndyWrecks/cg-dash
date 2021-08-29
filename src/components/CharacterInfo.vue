@@ -42,7 +42,7 @@ export default {
   },
   created() {
     this.getPlayerData();
-    this.timer = setInterval(function () {this.getPlayerData()}.bind(this), 10000);
+    this.timer = setInterval(function () {this.getPlayerData()}.bind(this), 1000000);
   },
   methods: {
     getPlayerData() {
