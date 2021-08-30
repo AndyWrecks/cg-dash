@@ -31,18 +31,22 @@
 
 <script lang="ts">
 import getPlayerData from "@/helpers/playerData/getPlayerData";
+import Vue from 'vue';
 
-export default {
+export default Vue.extend({
   name: "characterInfo",
   data() {
     return {
-      characters: null,
-      timer: ''
+      characters: {},
+      timer: 0
     }
   },
   created() {
+    // eslint-disable-next-line @typescript-eslint/no-this-alias
+    const self = this;
+
     this.getPlayerData();
-    this.timer = setInterval(function () {this.getPlayerData()}.bind(this), 1000000);
+    this.timer = setInterval(function () {self.getPlayerData()}.bind(this), 1000000);
   },
   methods: {
     getPlayerData() {
@@ -58,7 +62,7 @@ export default {
   beforeDestroy() {
     this.cancelAutoUpdate()
   }
-}
+})
 </script>
 
 <style scoped>
