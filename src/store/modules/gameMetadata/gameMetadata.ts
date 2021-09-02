@@ -1,12 +1,25 @@
-const state = (): any => ({
-  name: "Curse of Stahd - Mondays"
+import getDashboardFoundryMapping from "@/data/sessionData";
+import { dashboardFoundryMappingT, gameMetadataT } from "@/types/types";
+
+const state = (): gameMetadataT => ({
+  name: "Curse of Stahd - Mondays",
+  urlSubstring: "hello-world"
 });
 
 const getters = {};
 
-const actions = {};
+const actions = {
+  getSessionData({ commit }: { commit: Function }): void {
+    commit("setSessionData", getDashboardFoundryMapping("sunday-rotfm"));
+  }
+};
 
-const mutations = {};
+const mutations = {
+  setSessionData(state: gameMetadataT, sessionData: dashboardFoundryMappingT) {
+    state.name = sessionData.name;
+    state.urlSubstring = sessionData.worldId;
+  }
+};
 
 export default {
   namespaced: true,

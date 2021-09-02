@@ -40,7 +40,8 @@ export default Vue.extend({
     }
   },
   mounted() {
-    this.$store.dispatch('playerCharacters/getPlayerCharacters')
+    console.log('render');
+    this.$store.dispatch('playerCharacters/getPlayerCharacters');
   }
 })
 </script>

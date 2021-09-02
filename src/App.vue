@@ -37,9 +37,6 @@ import Calendar from "@/components/Calendar.vue";
 import CharacterInfo from "@/components/CharacterInfo.vue";
 import QuestLog from "@/components/QuestLog.vue";
 
-// Data
-import {appCompData} from "@/types/types";
-
 export default Vue.extend({
   name: 'App',
   components: {
@@ -48,10 +45,17 @@ export default Vue.extend({
     CharacterInfo,
     QuestLog
   },
-  data() : appCompData {
-    return {
-      sessionName: this.$store.state.gameMetadata.name
-    }
+  computed: {
+      sessionName() {
+        return this.$store.state.gameMetadata.name
+      }
+  },
+  // Need to figure out how to optimize so both created and updated are not needed to render correct data. There seems to be a race condition in the store
+  created() {
+    this.$store.dispatch('gameMetadata/getSessionData');
+  },
+  updated() {
+    this.$store.dispatch('gameMetadata/getSessionData');
   }
 })
 </script>

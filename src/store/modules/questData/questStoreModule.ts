@@ -1,5 +1,5 @@
 import getDataFromS3 from "@/api/getDataFromS3";
-import { QuestStoreT } from "@/types/types";
+import { QuestStoreT, StateT } from "@/types/types";
 import groomQuestData from "@/store/modules/questData/groomQuestData";
 
 const state = (): QuestStoreT => ({
@@ -9,10 +9,16 @@ const state = (): QuestStoreT => ({
 const getters = {};
 
 const actions = {
-  getQuestData({ commit }: { commit: Function }): void {
-    getDataFromS3(
-      "https://commonwealthgiant.s3.us-east-2.amazonaws.com/character-json/hello-world-quests.json"
-    ).then(data => commit("setQuestData", data));
+  getQuestData({
+    commit,
+    rootState
+  }: {
+    commit: Function;
+    rootState: StateT;
+  }): void {
+    getDataFromS3(`${rootState.gameMetadata.urlSubstring}-quests`).then(data =>
+      commit("setQuestData", data)
+    );
   }
 };
 

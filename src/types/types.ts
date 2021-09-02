@@ -38,6 +38,16 @@ export type questLogCompData = {
   quests: groomedQuestDataSet;
 };
 
+// Static Data
+export type dashboardFoundryMappingDataSet = {
+  [key: string]: dashboardFoundryMappingT;
+};
+
+export type dashboardFoundryMappingT = {
+  worldId: string;
+  name: string;
+};
+
 // Store
 export type StoreT = {
   state: StateT;
@@ -47,6 +57,8 @@ export type StateT = {
   playerCharacters: {
     characters: groomedQuestDataSet;
   };
+  quests: QuestStoreT;
+  gameMetadata: gameMetadataT;
 };
 
 export type PlayerCharactersT = {
@@ -55,4 +67,9 @@ export type PlayerCharactersT = {
 
 export type QuestStoreT = {
   data: groomedQuestDataSet;
+};
+
+export type gameMetadataT = {
+  name: string;
+  urlSubstring: string;
 };
