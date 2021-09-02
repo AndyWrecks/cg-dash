@@ -8,15 +8,15 @@
     </v-row>
     <v-row>
       <v-col>
-        <CharacterInfo />
+        <CharacterInfo/>
       </v-col>
       <v-col>
-        <quest-log />
+        <quest-log/>
       </v-col>
     </v-row>
 
     <v-row>
-      <v-divider />
+      <v-divider/>
     </v-row>
 
     <v-row>
@@ -46,9 +46,9 @@ export default Vue.extend({
     QuestLog
   },
   computed: {
-      sessionName() {
-        return this.$store.state.gameMetadata.name
-      }
+    sessionName() {
+      return this.$store.state.gameMetadata.name
+    }
   },
   // Need to figure out how to optimize so both created and updated are not needed to render correct data. There seems to be a race condition in the store
   created() {
