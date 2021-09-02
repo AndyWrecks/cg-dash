@@ -29,6 +29,8 @@
 </template>
 
 <script lang="ts">
+import Vue from 'vue';
+
 // Components
 import Header from '@/components/Header.vue'
 import Calendar from "@/components/Calendar.vue";
@@ -36,10 +38,9 @@ import CharacterInfo from "@/components/CharacterInfo.vue";
 import QuestLog from "@/components/QuestLog.vue";
 
 // Data
-import sessionData from "./mock-data/sessionData";
 import {appCompData} from "@/types/types";
 
-export default {
+export default Vue.extend({
   name: 'App',
   components: {
     Calendar,
@@ -49,10 +50,10 @@ export default {
   },
   data() : appCompData {
     return {
-      sessionName: sessionData.sessionName
+      sessionName: this.$store.state.gameMetadata.name
     }
   }
-}
+})
 </script>
 
 <style>

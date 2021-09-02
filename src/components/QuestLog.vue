@@ -14,9 +14,10 @@
 </template>
 
 <script lang="ts">
+import Vue from "vue";
 import {groomedQuestDataSet} from "@/types/types";
 
-export default {
+export default Vue.extend({
   name: "QuestLog",
   computed: {
     quests() : groomedQuestDataSet {
@@ -26,7 +27,7 @@ export default {
   mounted() : void {
     this.$store.dispatch('quests/getQuestData')
   }
-}
+});
 </script>
 
 <style scoped>
