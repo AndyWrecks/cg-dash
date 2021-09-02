@@ -16,10 +16,8 @@ const actions = {
     commit: Function;
     rootState: StateT;
   }): void {
-    console.log(rootState);
     getDataFromS3(`${rootState.gameMetadata.urlSubstring}-actors`).then(
       data => {
-        console.log(data);
         commit("setPlayerCharacters", data);
       }
     );
