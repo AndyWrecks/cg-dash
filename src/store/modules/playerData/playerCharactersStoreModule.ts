@@ -1,4 +1,6 @@
 import getDataFromS3 from "@/api/getDataFromS3";
+import { PlayerCharactersT } from "@/types/types";
+import groomPlayerData from "@/store/modules/playerData/groomPlayerData";
 
 const state = () => ({
   characters: []
@@ -15,9 +17,8 @@ const actions = {
 };
 
 const mutations = {
-  setPlayerCharacters(state: any, playerCharacters: any) {
-    console.log(playerCharacters);
-    state.characters = playerCharacters;
+  setPlayerCharacters(state: PlayerCharactersT, playerCharacters: any) {
+    state.characters = groomPlayerData(playerCharacters);
   }
 };
 

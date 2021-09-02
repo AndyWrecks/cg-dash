@@ -37,3 +37,22 @@ export type characterInfoCompData = {
 export type questLogCompData = {
   quests: groomedQuestDataSet;
 };
+
+// Store
+export type StoreT = {
+  state: StateT;
+};
+
+export type StateT = {
+  playerCharacters: {
+    characters: groomedQuestDataSet;
+  };
+};
+
+export type PlayerCharactersT = {
+  characters: groomedQuestDataSet;
+};
+
+export type QuestStoreT = {
+  data: groomedQuestDataSet;
+};

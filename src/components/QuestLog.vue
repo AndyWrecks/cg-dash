@@ -14,18 +14,17 @@
 </template>
 
 <script lang="ts">
-
-import getQuestData from "@/store/modules/questData/getQuestData";
-import {questLogCompData} from "@/types/types";
-
-const questData = getQuestData();
+import {groomedQuestDataSet} from "@/types/types";
 
 export default {
   name: "QuestLog",
-  data() : questLogCompData {
-    return {
-      quests: questData
+  computed: {
+    quests() : groomedQuestDataSet {
+      return this.$store.state.quests.data
     }
+  },
+  mounted() {
+    this.$store.dispatch('quests/getQuestData')
   }
 }
 </script>
