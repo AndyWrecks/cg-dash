@@ -2,14 +2,14 @@ import getDataFromS3 from "@/api/getDataFromS3";
 import { PlayerCharactersT } from "@/types/types";
 import groomPlayerData from "@/store/modules/playerData/groomPlayerData";
 
-const state = () => ({
+const state = (): PlayerCharactersT => ({
   characters: []
 });
 
 const getters = {};
 
 const actions = {
-  getPlayerCharacters({ commit }: { commit: Function }) {
+  getPlayerCharacters({ commit }: { commit: Function }): void {
     getDataFromS3(
       "https://commonwealthgiant.s3.us-east-2.amazonaws.com/character-json/hello-world-actors.json"
     ).then(data => commit("setPlayerCharacters", data));
@@ -17,7 +17,7 @@ const actions = {
 };
 
 const mutations = {
-  setPlayerCharacters(state: PlayerCharactersT, playerCharacters: any) {
+  setPlayerCharacters(state: PlayerCharactersT, playerCharacters: any): void {
     state.characters = groomPlayerData(playerCharacters);
   }
 };

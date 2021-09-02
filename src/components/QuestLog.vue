@@ -23,7 +23,7 @@ export default {
       return this.$store.state.quests.data
     }
   },
-  mounted() {
+  mounted() : void {
     this.$store.dispatch('quests/getQuestData')
   }
 }
