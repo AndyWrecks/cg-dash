@@ -3,7 +3,7 @@ import questData1 from "@/mock-data/questData/fvtt-JournalEntry-cursed-cabin.jso
 import questData2 from "@/mock-data/questData/fvtt-JournalEntry-end-auril's-endless-winter.json";
 import questData3 from "@/mock-data/questData/fvtt-JournalEntry-sunblight.json";
 
-import groomQuestData from "@/helpers/questData/groomQuestData";
+import groomQuestData from "@/store/modules/questData/groomQuestData";
 
 export default (): any => {
   const rawQuestData = [questData1, questData2, questData3];

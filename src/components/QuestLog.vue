@@ -15,7 +15,7 @@
 
 <script lang="ts">
 
-import getQuestData from "@/helpers/questData/getQuestData";
+import getQuestData from "@/store/modules/questData/getQuestData";
 import {questLogCompData} from "@/types/types";
 
 const questData = getQuestData();
