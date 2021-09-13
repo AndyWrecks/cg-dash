@@ -1,5 +1,7 @@
 <template>
   <v-card>
+    <sectionNav :navItems="navItems"/>
+
     <v-expansion-panels>
         <v-expansion-panel v-for="character in characters" :key="character.name">
             <v-expansion-panel-header>
@@ -31,20 +33,27 @@
 
 <script lang="ts">
 import Vue from 'vue';
+import SectionNav from "@/components/common/SectionNav.vue";
 
 export default Vue.extend({
   name: "characterInfo",
-  computed: {
-    characters() {
-      return this.$store.state.playerCharacters.characters
+  components: {SectionNav},
+  data() {
+    return {
+      navItems: []
     }
   },
-  mounted() {
+  updated() {
+    this.$data.navItems = this.$store.state.playerCharacters.characters;
+  },
+  computed: {
+    characters() {
+      return this.$store.state.playerCharacters.characters;
+    }
+  },
+  beforeMount() {
     this.$store.dispatch('playerCharacters/getPlayerCharacters');
   }
 })
 </script>
 
-<style scoped>
-
-</style>

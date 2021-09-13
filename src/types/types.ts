@@ -9,6 +9,7 @@ export type groomedPlayerDataT = {
       [key: string]: playerCharacterAbilityT;
     };
   };
+  navData: PlayerNavigationT;
   class: any[];
 };
 
@@ -38,6 +39,13 @@ export type questLogCompData = {
   quests: groomedQuestDataSet;
 };
 
+// Common Component Data
+export type tileNavigationT = {
+  navID: string;
+  imgURL: string;
+  navTitle: string;
+};
+
 // Static Data
 export type dashboardFoundryMappingDataSet = {
   [key: string]: dashboardFoundryMappingT;
@@ -53,13 +61,17 @@ export type StoreT = {
   state: StateT;
 };
 
+// State
 export type StateT = {
   playerCharacters: {
+    navigation: PlayerNavigationT;
     characters: groomedQuestDataSet;
   };
   quests: QuestStoreT;
   gameMetadata: gameMetadataT;
 };
+
+export type PlayerNavigationT = tileNavigationT;
 
 export type PlayerCharactersT = {
   characters: groomedQuestDataSet;

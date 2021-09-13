@@ -1,6 +1,7 @@
 import getDataFromS3 from "@/api/getDataFromS3";
 import { QuestStoreT, StateT } from "@/types/types";
 import groomQuestData from "@/store/modules/questData/groomQuestData";
+import { Commit } from "vuex";
 
 const state = (): QuestStoreT => ({
   data: []
@@ -13,7 +14,7 @@ const actions = {
     commit,
     rootState
   }: {
-    commit: Function;
+    commit: Commit;
     rootState: StateT;
   }): void {
     getDataFromS3(`${rootState.gameMetadata.urlSubstring}-quests`).then(data =>

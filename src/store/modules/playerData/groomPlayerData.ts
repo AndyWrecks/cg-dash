@@ -8,6 +8,12 @@ export default (playerData: any[]): groomedPlayerDataSet => {
       data: {
         abilities: playerData.data.abilities
       },
+      // Should I extract navData to its own object in the state?
+      navData: {
+        navID: `${playerData.name}-nav`,
+        navTitle: playerData.name,
+        imgURL: playerData.img
+      },
       class: playerData.items.filter((item: any) => {
         return item.type === "class";
       })

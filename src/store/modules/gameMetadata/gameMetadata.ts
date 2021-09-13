@@ -1,5 +1,6 @@
 import getDashboardFoundryMapping from "@/data/sessionData";
 import { dashboardFoundryMappingT, gameMetadataT } from "@/types/types";
+import { Commit } from "vuex";
 
 const state = (): gameMetadataT => ({
   name: "Curse of Stahd - Mondays",
@@ -9,7 +10,7 @@ const state = (): gameMetadataT => ({
 const getters = {};
 
 const actions = {
-  getSessionData({ commit }: { commit: Function }): void {
+  getSessionData({ commit }: { commit: Commit }): void {
     commit("setSessionData", getDashboardFoundryMapping("sunday-rotfm"));
   }
 };

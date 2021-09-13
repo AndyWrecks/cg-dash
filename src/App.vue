@@ -50,11 +50,7 @@ export default Vue.extend({
       return this.$store.state.gameMetadata.name
     }
   },
-  // Need to figure out how to optimize so both created and updated are not needed to render correct data. There seems to be a race condition in the store
-  created() {
-    this.$store.dispatch('gameMetadata/getSessionData');
-  },
-  updated() {
+  beforeMount() {
     this.$store.dispatch('gameMetadata/getSessionData');
   }
 })
