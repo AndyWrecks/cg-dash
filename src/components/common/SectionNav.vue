@@ -1,17 +1,17 @@
 <template>
   <v-navigation-drawer>
     <v-list>
-      <v-list-item v-for="navItem in navItems" :key="navItem.navData.navID" link>
+      <v-list-item v-for="navItem in navItems" :key="navItem.navID" link>
         <v-list-item-avatar>
-          <v-img :src="navItem.navData.imgURL" :alt="navItem.navData.navID+'-nav-image'"/>
+          <v-img :src="navItem.imgURL" :alt="navItem.navID+'-nav-image'"/>
         </v-list-item-avatar>
-        {{navItem.navData.navTitle}}
+        {{navItem.navTitle}}
       </v-list-item>
     </v-list>
   </v-navigation-drawer>
 </template>
 <script lang="ts">
-import Vue, {PropType} from "vue";
+import Vue from "vue";
 
 export default Vue.extend({
   name: 'sectionNav',

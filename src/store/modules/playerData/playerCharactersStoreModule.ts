@@ -4,14 +4,11 @@ import groomPlayerData from "@/store/modules/playerData/groomPlayerData";
 import { Commit } from "vuex";
 
 const state = (): PlayerCharactersT => ({
-  characters: []
+  characters: [],
+  navData: []
 });
 
-export const getters = {
-  characters(state: PlayerCharactersT) {
-    return state.characters;
-  }
-};
+export const getters = {};
 
 const actions = {
   getPlayerCharacters({
@@ -31,7 +28,10 @@ const actions = {
 
 const mutations = {
   setPlayerCharacters(state: PlayerCharactersT, playerCharacters: any): void {
-    state.characters = groomPlayerData(playerCharacters);
+    const groomedPlayerData = groomPlayerData(playerCharacters);
+
+    state.characters = groomedPlayerData.playerData;
+    state.navData = groomedPlayerData.navData;
   }
 };
 

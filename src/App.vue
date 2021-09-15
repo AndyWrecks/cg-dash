@@ -6,6 +6,7 @@
         <Header :sectionTitle="sessionName" msg="Welcome to Your Vue.js App"/>
       </v-col>
     </v-row>
+
     <v-row>
       <v-col>
         <CharacterInfo/>

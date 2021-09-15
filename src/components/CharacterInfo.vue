@@ -44,7 +44,8 @@ export default Vue.extend({
     }
   },
   updated() {
-    this.$data.navItems = this.$store.state.playerCharacters.characters;
+    this.$data.navItems = this.$store.state.playerCharacters.navData;
+    console.log('updated')
   },
   computed: {
     characters() {

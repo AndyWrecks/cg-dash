@@ -1,5 +1,8 @@
 // PC Data Types
-export type groomedPlayerDataSet = groomedPlayerDataT[];
+export type groomedPlayerDataSet = {
+  playerData: groomedPlayerDataT[];
+  navData: PlayerNavigationT[];
+};
 
 export type groomedPlayerDataT = {
   name: string;
@@ -9,7 +12,6 @@ export type groomedPlayerDataT = {
       [key: string]: playerCharacterAbilityT;
     };
   };
-  navData: PlayerNavigationT;
   class: any[];
 };
 
@@ -74,7 +76,8 @@ export type StateT = {
 export type PlayerNavigationT = tileNavigationT;
 
 export type PlayerCharactersT = {
-  characters: groomedQuestDataSet;
+  characters: groomedPlayerDataT[];
+  navData: PlayerNavigationT[];
 };
 
 export type QuestStoreT = {
