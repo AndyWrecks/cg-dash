@@ -1,7 +1,7 @@
 <template>
   <v-navigation-drawer>
     <v-list>
-      <v-list-item v-for="navItem in navItems" :key="navItem.navID" link v-on:click="navSetActivePlayer(navItem.navID)">
+      <v-list-item v-for="navItem in navItems" :key="navItem.navID" link v-on:click="clicked(navItem.navID)">
         <v-list-item-avatar>
           <v-img :src="navItem.imgURL" :alt="navItem.navID+'-nav-image'"/>
         </v-list-item-avatar>
@@ -12,7 +12,6 @@
 </template>
 <script lang="ts">
 import Vue from "vue";
-import {mapActions} from "vuex";
 
 export default Vue.extend({
   name: 'sectionNav',
@@ -22,11 +21,8 @@ export default Vue.extend({
     }
   },
   methods: {
-    ...mapActions([
-        'playerCharacters/setActivePlayer'
-    ]),
-    navSetActivePlayer: function (playerId: string) {
-      this['playerCharacters/setActivePlayer'](playerId);
+    clicked: function (clickEventTargetId: string) {
+      this.$emit('clicked', clickEventTargetId);
     }
   }
 });
