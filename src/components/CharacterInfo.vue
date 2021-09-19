@@ -1,13 +1,25 @@
 <template>
   <v-card>
     <v-row>
-      <v-col cols="5">
+      <v-col cols="5" md="4">
         <sectionNav v-if="navItems" :active-id="activeId" :navItems="navItems" @clicked="listItemAction"/>
       </v-col>
 
-      <v-col cols="7">
-        <v-list-item v-if="activePanel">
+      <v-col cols="7" md="8" v-if="activePanel">
+        <v-list-item>
           {{activePanel.name}}
+        </v-list-item>
+
+        <v-list-item>
+          <span v-for="pcClass in activePanel.class" :key="`${activePanel.name}-${pcClass.name}`">
+            {{pcClass.name}} - {{pcClass.data.subclass}} {{pcClass.data.levels}}
+          </span>
+        </v-list-item>
+
+        <v-list-item>
+          <span v-for="(ability, name) in activePanel.data.abilities" :key="`${activePanel.name}-${name}`">
+            {{name}}<br>{{ability.value}}<br>{{ability.mod}}
+          </span>
         </v-list-item>
       </v-col>
     </v-row>
