@@ -5,6 +5,7 @@ export type groomedPlayerDataSet = {
 };
 
 export type groomedPlayerDataT = {
+  playerId: string;
   name: string;
   img: string;
   data: {
@@ -78,6 +79,7 @@ export type PlayerNavigationT = tileNavigationT;
 export type PlayerCharactersT = {
   characters: groomedPlayerDataT[];
   navData: PlayerNavigationT[];
+  activePlayerPanel: groomedPlayerDataT | undefined;
 };
 
 export type QuestStoreT = {
