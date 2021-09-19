@@ -26,7 +26,6 @@ const actions = {
     );
   },
   setActivePlayer({ commit }: { commit: Commit }, playerId: string): void {
-    console.log("settingPlayer");
     commit("updateActivePlayer", playerId);
   }
 };
@@ -40,14 +39,9 @@ const mutations = {
     state.activePlayerPanel = state.characters[0];
   },
   updateActivePlayer(state: PlayerCharactersT, playerId: string): void {
-    console.log(
-      state.characters.find(player => player.playerId === playerId),
-      "updating"
-    );
     state.activePlayerPanel = state.characters.find(
       player => player.playerId === playerId
     );
-    console.log(state.activePlayerPanel);
   }
 };
 

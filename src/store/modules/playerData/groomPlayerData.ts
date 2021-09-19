@@ -35,6 +35,5 @@ export default (playerData: any[]): groomedPlayerDataSet => {
     groomedDataSet.navData.push(groomedNavData);
   });
 
-  console.log(groomedDataSet);
   return groomedDataSet;
 };

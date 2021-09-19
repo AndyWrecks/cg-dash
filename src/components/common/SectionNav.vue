@@ -26,7 +26,6 @@ export default Vue.extend({
         'playerCharacters/setActivePlayer'
     ]),
     navSetActivePlayer: function (playerId: string) {
-      console.log('firing')
       this['playerCharacters/setActivePlayer'](playerId);
     }
   }
