@@ -1,7 +1,7 @@
 <template>
   <v-navigation-drawer>
     <v-list>
-      <v-list-item v-for="navItem in navItems" :key="navItem.navID" link v-on:click="clicked(navItem.navID)">
+      <v-list-item v-for="navItem in navItems" v-bind:class="{active: navItem.navID === activeId}" :key="navItem.navID" link v-on:click="clicked(navItem.navID)">
         <v-list-item-avatar>
           <v-img :src="navItem.imgURL" :alt="navItem.navID+'-nav-image'"/>
         </v-list-item-avatar>
@@ -18,7 +18,8 @@ export default Vue.extend({
   props: {
     navItems: {
       type: Array
-    }
+    },
+    activeId: String
   },
   methods: {
     clicked: function (clickEventTargetId: string) {
@@ -27,3 +28,10 @@ export default Vue.extend({
   }
 });
 </script>
+
+<style lang="scss">
+.active {
+  background-color: lightgray;
+}
+</style>
+

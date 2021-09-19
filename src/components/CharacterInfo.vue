@@ -2,7 +2,7 @@
   <v-card>
     <v-row>
       <v-col cols="5">
-        <sectionNav v-if="navItems" :navItems="navItems" @clicked="listItemAction"/>
+        <sectionNav v-if="navItems" :active-id="activeId" :navItems="navItems" @clicked="listItemAction"/>
       </v-col>
 
       <v-col cols="7">
@@ -26,7 +26,8 @@ export default Vue.extend({
   components: {SectionNav},
   data() {
     return {
-      navItems: []
+      navItems: [],
+      activeId: ''
     }
   },
   methods: {
@@ -39,7 +40,7 @@ export default Vue.extend({
   },
   updated() {
     this.$data.navItems = this.$store.state.playerCharacters.navData;
-    console.log('hello')
+    this.$data.activeId = this.$store.state.playerCharacters.activePlayerPanel.playerId;
   },
   computed: {
     activePanel() {
