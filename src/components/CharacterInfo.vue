@@ -13,8 +13,15 @@
       <v-col cols="7" md="7" v-if="activePanel">
         <v-row>
           <v-col>
-            <v-list-item>
-              {{ activePanel.name }}
+            <v-list-item two-line>
+              <v-list-item-content>
+                <v-list-item-title>
+                  {{ activePanel.name }}
+                </v-list-item-title>
+                <v-list-item-subtitle>
+                  {{ activePanel.data.details.race }}
+                </v-list-item-subtitle>
+              </v-list-item-content>
             </v-list-item>
           </v-col>
 

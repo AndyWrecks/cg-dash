@@ -18,7 +18,10 @@ export default (playerData: any[]): groomedPlayerDataSet => {
       name: playerData.name,
       img: playerData.img,
       data: {
-        abilities: playerData.data.abilities
+        abilities: playerData.data.abilities,
+        details: {
+          race: playerData.data.details.race
+        }
       },
       class: playerData.items.filter((item: any) => {
         return item.type === "class";
