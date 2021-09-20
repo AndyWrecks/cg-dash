@@ -16,11 +16,13 @@
           </span>
         </v-list-item>
 
-        <v-list-item>
-          <span v-for="(ability, name) in activePanel.data.abilities" :key="`${activePanel.name}-${name}`">
+        <v-row>
+          <v-col class="ability-score" v-for="(ability, name) in activePanel.data.abilities" :key="`${activePanel.name}-${name}`">
+            <v-card>
             {{name}}<br>{{ability.value}}<br>{{ability.mod}}
-          </span>
-        </v-list-item>
+            </v-card>
+          </v-col>
+        </v-row>
       </v-col>
     </v-row>
 
@@ -65,3 +67,10 @@ export default Vue.extend({
 })
 </script>
 
+
+<style>
+.ability-score {
+    text-align: center;
+  padding: 10px
+}
+</style>

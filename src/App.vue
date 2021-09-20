@@ -1,5 +1,6 @@
 <template>
   <v-container id="app">
+
     <v-row>
       <v-col>
         <img alt="Vue logo" height="100" src="./assets/cg-header.png">
