@@ -12,8 +12,15 @@
 
       <v-col cols="7" md="7" v-if="activePanel">
         <v-row>
-          <v-col>
-            <v-list-item two-line>
+          <v-col cols="3">
+            <v-img
+              :src="activePanel.img"
+              :alt="`${activePanel.name}-portrait}`"
+              max-width="400px"
+            />
+          </v-col>
+          <v-col cols="9">
+            <v-list-item three-line>
               <v-list-item-content>
                 <v-list-item-title>
                   {{ activePanel.name }}
@@ -21,21 +28,16 @@
                 <v-list-item-subtitle>
                   {{ activePanel.data.details.race }}
                 </v-list-item-subtitle>
-              </v-list-item-content>
-            </v-list-item>
-          </v-col>
-
-          <!--Class Breakdown-->
-          <v-col>
-            <v-list-item two-line>
-              <v-list-item-content>
-                <v-list-item-title>Class</v-list-item-title>
-                <v-list-item-subtitle
-                  v-for="pcClass in activePanel.class"
-                  :key="`${activePanel.name}-${pcClass.name}`"
-                >
-                  {{ pcClass.name }} - {{ pcClass.data.subclass }}
-                  {{ pcClass.data.levels }}
+                <v-list-item-subtitle>
+                  <span
+                    v-for="pcClass in activePanel.class"
+                    :key="`${activePanel.name}-${pcClass.name}`"
+                  >
+                    {{ pcClass.data.levels }} {{ pcClass.name }}
+                    <span v-if="pcClass.data.subclass"
+                      >({{ pcClass.data.subclass }})</span
+                    >
+                  </span>
                 </v-list-item-subtitle>
               </v-list-item-content>
             </v-list-item>
