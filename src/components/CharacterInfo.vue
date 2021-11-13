@@ -1,7 +1,7 @@
 <template>
-  <v-card elevation="1">
+  <v-card elevation="1" max-width="60%" class="mx-auto" style="margin: auto">
     <v-row>
-      <v-col cols="5" md="4">
+      <v-col cols="5" md="3">
         <sectionNav
           v-if="navItems"
           :active-id="activeId"
@@ -10,7 +10,7 @@
         />
       </v-col>
 
-      <v-col cols="7" md="7" v-if="activePanel">
+      <v-col cols="7" md="8" v-if="activePanel">
         <v-row>
           <v-col cols="3">
             <v-img
@@ -39,28 +39,30 @@
                     >
                   </span>
                 </v-list-item-subtitle>
-              </v-list-item-content>
-            </v-list-item>
-          </v-col>
-        </v-row>
 
-        <!--Ability Scores-->
-        <v-row>
-          <v-col
-            class="ability-score"
-            v-for="(ability, name) in activePanel.data.abilities"
-            :key="`${activePanel.name}-${name}`"
-          >
-            <v-list-item two-line>
-              <v-list-item-content>
-                <v-list-item-title>
-                  {{ name }}
-                </v-list-item-title>
                 <v-list-item-subtitle>
-                  {{ ability.mod }}
-                </v-list-item-subtitle>
-                <v-list-item-subtitle>
-                  {{ ability.value }}
+                  <!--Ability Scores-->
+                  <v-row>
+                    <v-col
+                      class="ability-score"
+                      v-for="(ability, name) in activePanel.data.abilities"
+                      :key="`${activePanel.name}-${name}`"
+                    >
+                      <v-list-item two-line>
+                        <v-list-item-content>
+                          <v-list-item-title>
+                            {{ name }}
+                          </v-list-item-title>
+                          <v-list-item-subtitle>
+                            {{ ability.mod }}
+                          </v-list-item-subtitle>
+                          <v-list-item-subtitle>
+                            {{ ability.value }}
+                          </v-list-item-subtitle>
+                        </v-list-item-content>
+                      </v-list-item>
+                    </v-col>
+                  </v-row>
                 </v-list-item-subtitle>
               </v-list-item-content>
             </v-list-item>

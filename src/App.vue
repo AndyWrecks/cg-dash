@@ -7,10 +7,13 @@
       </v-col>
     </v-row>
 
-    <v-row>
+    <v-row align="center" justify="center">
       <v-col>
         <CharacterInfo />
       </v-col>
+    </v-row>
+
+    <v-row>
       <v-col>
         <quest-log />
       </v-col>
