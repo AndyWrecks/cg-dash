@@ -1,34 +1,65 @@
 <template>
-  <v-container id="app">
-    <v-row>
-      <v-col>
-        <img alt="Vue logo" height="100" src="./assets/cg-header.png" />
-        <Header :sectionTitle="sessionName" msg="Welcome to Your Vue.js App" />
-      </v-col>
-    </v-row>
+  <v-app>
+    <v-navigation-drawer height="100vh" fixed>
+      <img alt="Vue logo" height="100" src="./assets/cg-header.png" />
+      <v-divider></v-divider>
+      <v-list>
+        <v-list-item>
+          <v-icon>mdi-calendar</v-icon>
+          <v-list-item-content>
+            Session Info
+          </v-list-item-content>
+        </v-list-item>
 
-    <v-row align="center" justify="center">
-      <v-col>
-        <CharacterInfo />
-      </v-col>
-    </v-row>
+        <v-list-item>
+          <v-icon>mdi-account-group</v-icon>
+          <v-list-item-content>
+            Party
+          </v-list-item-content>
+        </v-list-item>
 
-    <v-row>
-      <v-col>
-        <quest-log />
-      </v-col>
-    </v-row>
+        <v-list-item>
+          <v-icon>mdi-information</v-icon>
+          <v-list-item-content>
+            Game Information
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
+    </v-navigation-drawer>
 
-    <v-row>
-      <v-divider />
-    </v-row>
+    <v-container id="app">
+      <v-row>
+        <v-col>
+          <Header
+            :sectionTitle="sessionName"
+            msg="Welcome to Your Vue.js App"
+          />
+        </v-col>
+      </v-row>
 
-    <v-row>
-      <v-col>
-        <Calendar></Calendar>
-      </v-col>
-    </v-row>
-  </v-container>
+      <v-row align="center" justify="center">
+        <v-col>
+          <CharacterInfo />
+        </v-col>
+      </v-row>
+
+      <v-row>
+        <v-col>
+          <quest-log />
+        </v-col>
+      </v-row>
+
+      <v-row>
+        <v-divider />
+      </v-row>
+
+      <v-row>
+        <v-col>
+          <Calendar></Calendar>
+        </v-col>
+      </v-row>
+    </v-container>
+  </v-app>
 </template>
 
 <script lang="ts">

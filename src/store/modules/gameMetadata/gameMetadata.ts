@@ -11,7 +11,7 @@ const getters = {};
 
 const actions = {
   getSessionData({ commit }: { commit: Commit }): void {
-    commit("setSessionData", getDashboardFoundryMapping("curse-of-strahd"));
+    commit("setSessionData", getDashboardFoundryMapping("sunday-rotfm"));
   }
 };
 
