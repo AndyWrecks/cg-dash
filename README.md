@@ -1,4 +1,5 @@
 # cg-dash
+cg-dash (working title) is a dashboard application for Game Masters to display critical information for their Table Top games.
 
 ## Project setup
 ```

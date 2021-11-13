@@ -15,7 +15,7 @@
           <v-col cols="3">
             <v-img
               :src="activePanel.img"
-              :alt="`${activePanel.name}-portrait}`"
+              :alt="`${activePanel.name}-portrait`"
               max-width="400px"
             />
           </v-col>
