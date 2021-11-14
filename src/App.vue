@@ -7,14 +7,14 @@
         <v-list-item>
           <v-icon>mdi-calendar</v-icon>
           <v-list-item-content>
-            Session Info
+            <router-link to="/">Session Info</router-link>
           </v-list-item-content>
         </v-list-item>
 
         <v-list-item>
           <v-icon>mdi-account-group</v-icon>
           <v-list-item-content>
-            Party
+            <router-link to="/party-info">Party</router-link>
           </v-list-item-content>
         </v-list-item>
 
@@ -37,21 +37,7 @@
         </v-col>
       </v-row>
 
-      <v-row align="center" justify="center">
-        <v-col>
-          <CharacterInfo />
-        </v-col>
-      </v-row>
-
-      <v-row>
-        <v-col>
-          <quest-log />
-        </v-col>
-      </v-row>
-
-      <v-row>
-        <v-divider />
-      </v-row>
+      <router-view />
 
       <v-row>
         <v-col>
@@ -68,16 +54,12 @@ import Vue from "vue";
 // Components
 import Header from "@/components/Header.vue";
 import Calendar from "@/components/Calendar.vue";
-import CharacterInfo from "@/components/CharacterInfo.vue";
-import QuestLog from "@/components/QuestLog.vue";
 
 export default Vue.extend({
   name: "App",
   components: {
     Calendar,
-    Header,
-    CharacterInfo,
-    QuestLog
+    Header
   },
   computed: {
     sessionName() {
